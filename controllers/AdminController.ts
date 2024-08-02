@@ -7,6 +7,12 @@ import { Vandor } from "../models";
 export const CreateVandor = async(req:Request, res:Response, next:NextFunction) => {
     const { name, address, pincode, foodType, email, password, ownerName, phone } = <CreateVandorInput>req.body;
 
+    // EXSISTING VANDOR 
+    const exsistingVandor = await Vandor.findOne({email: email})
+    if ( exsistingVandor !== null ) {
+        return res.json({"message": "A VANDOR IS ALREADY EXSISTING IN THE DATABASE WITH THE RESPECTIVE EMAIL!"})
+    } 
+
     // CREATION OF VANDOR 
     const CreateVandor = await Vandor.create({
         name: name,
@@ -15,7 +21,7 @@ export const CreateVandor = async(req:Request, res:Response, next:NextFunction) 
         foodType: foodType,
         email: email,
         password: password,
-        salt: '',
+        salt: 'thisissalt',
         ownerName: ownerName,
         phone: phone,
         rating: 0,
@@ -23,7 +29,10 @@ export const CreateVandor = async(req:Request, res:Response, next:NextFunction) 
         coverImages: []
     });
 
-    return res.json({ name, address, pincode, foodType, email, password, ownerName, phone });
+
+
+
+    return res.json(CreateVandor);
 };
 
 // CONTROLLERS :: GETVANDORBYID

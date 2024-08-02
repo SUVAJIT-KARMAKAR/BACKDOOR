@@ -1,6 +1,5 @@
 // MODELS :: VANDOR
 import mongoose, { Schema, Document, Model } from "mongoose";
-
 // INTERFACE FOR VANDOR DATA
 interface VandorDoc extends Document {
     name: string,
