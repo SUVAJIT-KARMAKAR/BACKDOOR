@@ -1,4 +1,4 @@
-// DTO :: VANDOR - DTO 
+// DTO :: VANDOR 
 export interface CreateVandorInput {
     name: string,
     ownerName: string,
