@@ -8,7 +8,7 @@ const router = express.Router();
 // POST :: CREATING VANDOR
 router.post('/vandor', CreateVandor);
 // GET :: GETTING VANDOR
-router.get('/vanders', GetVandors);
+router.get('/vandors', GetVandors);
 // GET :: GETTING VANDOR BY ID
 router.get('/vandor/:id', GetVandorByID);
 
