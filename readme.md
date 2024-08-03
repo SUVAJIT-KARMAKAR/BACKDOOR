@@ -21,6 +21,9 @@ Microservices that is all you need for your personal food ordering and deliverin
 ```bash
   npm install body-parser
 ```
+```bash
+  npm install jsonwebtoken @types/jsonwebtoken
+```
 
 ## RUNNING THE PROJECT LOCALLY 
 Git clone the project using the project HTTP / SSH link.

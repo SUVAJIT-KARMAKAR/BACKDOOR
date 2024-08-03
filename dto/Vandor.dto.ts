@@ -9,3 +9,17 @@ export interface CreateVandorInput {
     email: string,
     password: string
 }
+
+// DTO :: VANDOR - LOGIN 
+export interface VandorLoginInputs {
+    email: string,
+    password: string
+}
+
+// DTO :: VANDOR - PAYLOAD 
+export interface VandorPayload {
+    _id: string,
+    email: string,
+    name: string,
+    foodTypes: [string];
+}
