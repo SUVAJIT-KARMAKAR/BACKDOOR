@@ -1,6 +1,7 @@
 // ROUTES :: VANDOR 
 import express, { Request, Response, NextFunction } from 'express';
 import { GetVandorProfile, UpdateVandorService, VandorLogin } from '../controllers';
+import { Authenticate } from '../middlewares';
 
 // ROUTER
 const router = express.Router();
@@ -8,7 +9,8 @@ const router = express.Router();
 // VANDOR :: LOGIN
 router.post('/login', VandorLogin);
 // VANDOR :: PROFILE 
-router.get('/profile', GetVandorProfile)
+router.use(Authenticate);
+router.get('/profile', GetVandorProfile);
 router.patch('/profile',UpdateVandorService);
 // VANDOR :: SERVICE
 router.patch('/service', UpdateVandorService);

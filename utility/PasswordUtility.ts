@@ -24,7 +24,7 @@ export const ValidatePassword = async( enteredPassword:string, savedPassword:str
 
 // GENERATING SIGNATURE 
 export const GenerateSignature = ( payload: VandorPayload ) => {
-    return jwt.sign(payload, APP_SECRET, {expiresIn: '30m'});
+    return jwt.sign(payload, APP_SECRET, {expiresIn: '1d'});
 }   
 
 // VALIDATING SIGNAUTE 

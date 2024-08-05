@@ -23,3 +23,11 @@ export interface VandorPayload {
     name: string,
     foodTypes: [string];
 }
+
+// DTO :: VANDORO - EDIT
+export interface EditVandorInput{
+    name: string;
+    address: string;
+    phone: string;
+    foodType:[string]
+}
