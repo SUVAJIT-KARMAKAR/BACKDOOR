@@ -14,7 +14,7 @@ interface VandorDoc extends Document {
     serviceAvailable: boolean,
     coverImages: [string],
     rating: number,
-    // foods: any
+    foods: any
 }
 
 // SCHEMA DEFINITION 
@@ -74,10 +74,10 @@ const VandorSchema = new Schema( {
         type: Number,
     },
 
-    // foods: [{
-    //     type: mongoose.SchemaTypes.ObjectId,
-    //     ref: 'food'
-    // }]
+    foods: [{
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: 'food'
+    }]
 },{
     toJSON: {
         transform(doc, ret) {

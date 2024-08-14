@@ -17,11 +17,7 @@ app.use('/vandor', VandorRoute);
 
 // DATABASE CONNECTION 
 mongoose.connect(MONGO_URI, {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true,
-    // useCreateIndex: true
 }).then(result => {
-    // console.log(result)
     console.log("CONNECTION IS READY!")
 }).catch(err => console.log(err))
 

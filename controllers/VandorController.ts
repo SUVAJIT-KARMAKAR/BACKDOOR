@@ -67,5 +67,34 @@ export const UpdateVandorProfile = async(req:Request, res:Response, next:NextFun
 
 // VANDOR :: UPDATE SERVICE 
 export const UpdateVandorService = async(req:Request, res:Response, next:NextFunction) => {
-    
+    const user = req.user;
+    if ( user ) {
+        const existingVandor = await FindVandor(user._id);
+        
+        if ( existingVandor !== null ) {
+            existingVandor.serviceAvailable = !existingVandor.serviceAvailable;
+            const saveResult = await existingVandor.save();
+            return res.json(saveResult);
+        }
+        return res.json(existingVandor);
+    }
+    return res.json({'message' : "VANDOR INFORMATION NOT FOUND!"})
 }
+
+// VANDOR :: FOOD 
+export const AddFood = async(req:Request, res:Response, next:NextFunction) => {
+    const user = req.user;
+    if ( user ) {
+
+    }
+    return res.json({"message" : "SOMETHING WENT WRONG FOR ADDING FOODS!"})
+}
+
+// VANDOR :: GETFOOD 
+export const GetFoods = async ( req:Request, res:Response, next:NextFunction ) => {
+    const user = req.user;
+    if ( user ) {
+
+    }
+    return res.json({"message" : "FOODS INFORMATION IS NOT FOUND!"})
+}   

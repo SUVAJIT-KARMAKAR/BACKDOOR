@@ -8,13 +8,18 @@ const router = express.Router();
 
 // VANDOR :: LOGIN
 router.post('/login', VandorLogin);
+
 // VANDOR :: PROFILE 
 router.use(Authenticate);
-router.patch('/profile', UpdateVandorProfile);
 router.get('/profile', GetVandorProfile);
-router.patch('/profile',UpdateVandorService);
+router.patch('/profile', UpdateVandorProfile);
+
 // VANDOR :: SERVICE
 router.patch('/service', UpdateVandorService);
+
+// VANDOR :: FOOD   
+router.post('/food');
+router.get('/foods')
 
 router.use('/', (req:Request, res:Response, next:NextFunction) => {
     res.json( {message: "HELLO FROM THE VANDOR!"} );
