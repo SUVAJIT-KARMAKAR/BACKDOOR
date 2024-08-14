@@ -1,3 +1,3 @@
 // MODEL :: INDEX 
-export * from './Vandor';
-export * from './Food';
+export * from './Vandor/Vandor';
+export * from './Food/Food';

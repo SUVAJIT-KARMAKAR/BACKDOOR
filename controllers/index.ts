@@ -1,3 +1,3 @@
 // CONTROLLERS :: INDEX
-export * from './AdminController';
-export * from './VandorController';
+export * from './Admin/AdminController';
+export * from './Vandor/VandorController';

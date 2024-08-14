@@ -1,9 +1,10 @@
 // CONTROLLER :: VANDORCONTROLLER 
 import { Request, Response, NextFunction } from "express";
-import { VandorLoginInputs } from "../dto/Vandor.dto";
-import { FindVandor } from "./AdminController";
-import { ValidatePassword, GenerateSignature } from "../utility";
-import { EditVandorInputs } from "../dto/Vandor.dto";
+import { VandorLoginInputs } from "../../dto/Vandor/Vandor.dto";
+import { FindVandor } from "../Admin/AdminController";
+import { ValidatePassword } from "../../utility/PasswordUtility/PasswordUtility";
+import { GenerateSignature } from "../../utility/PasswordUtility/PasswordUtility";
+import { EditVandorInputs } from "../../dto/Vandor/Vandor.dto";
 
 // VANDOR :: LOGIN FUNCTION 
 export const VandorLogin = async(req:Request, res:Response, next:NextFunction) => {

@@ -1,7 +1,12 @@
 // ROUTES :: VANDOR 
 import express, { Request, Response, NextFunction } from 'express';
-import { UpdateVandorProfile, GetVandorProfile, UpdateVandorService, VandorLogin } from '../controllers';
-import { Authenticate } from '../middlewares';
+
+import { UpdateVandorProfile } from '../../controllers';
+import { GetVandorProfile } from '../../controllers';
+import { UpdateVandorService } from '../../controllers';
+import { VandorLogin } from '../../controllers';
+
+import { Authenticate } from '../../middlewares';
 
 // ROUTER
 const router = express.Router();

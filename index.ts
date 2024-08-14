@@ -5,7 +5,8 @@ import { MONGO_URI } from "./config";
 import mongoose from "mongoose";
 
 // IMPORTING ROUTES 
-import { AdminRoute, VandorRoute } from "./routes";
+import { AdminRoute } from "./routes/Admin/AdminRoute";
+import { VandorRoute } from "./routes/Vandor/VandorRoute";
 
 const app = express();
 app.use(bodyParser.json());

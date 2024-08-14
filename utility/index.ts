@@ -1,2 +1,2 @@
 // UTILITY :: INDEX 
-export * from './PasswordUtility';
+export * from './PasswordUtility/PasswordUtility';

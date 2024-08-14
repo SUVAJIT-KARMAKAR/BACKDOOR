@@ -1,3 +1,3 @@
 // ROUTES :: INDEX 
-export * from "./AdminRoute";
-export * from "./VandorRoute";
+export * from "./Admin/AdminRoute";
+export * from "./Vandor/VandorRoute";

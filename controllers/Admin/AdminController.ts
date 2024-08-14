@@ -1,8 +1,9 @@
 // CONTROLLERS :: ADMINCONTROLLER
 import { Request,Response,NextFunction } from "express";
-import { CreateVandorInput } from "../dto/Vandor.dto";
-import { Vandor } from "../models";
-import { GeneratePassword, GenerateSalt } from "../utility";
+import { CreateVandorInput } from "../../dto/Vandor/Vandor.dto";
+import { Vandor } from "../../models";
+import { GeneratePassword } from "../../utility/PasswordUtility/PasswordUtility";
+import { GenerateSalt } from "../../utility/PasswordUtility/PasswordUtility";
 
 // FINDING THE VANDOR 
 export const FindVandor = async(id:string | undefined, email? : string) => {

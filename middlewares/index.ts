@@ -1,2 +1,2 @@
 // MIDDLEWARE :: INDEX 
-export * from "./CommonAuth";
+export * from "../middlewares/CommonAuth/CommonAuth";

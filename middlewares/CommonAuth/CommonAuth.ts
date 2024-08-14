@@ -1,7 +1,7 @@
 // MIDDLEWARE :: COMMONAUTH
-import { Request, NextFunction, Response } from 'express'
-import { AuthPayload } from "../dto/Auth.dto";
-import { ValidateSignature } from '../utility';
+import { Request, NextFunction, Response } from 'express';
+import { AuthPayload } from '../../dto/Auth/Auth.dto';
+import { ValidateSignature } from '../../utility/PasswordUtility/PasswordUtility';
 
 declare global {
     namespace Express {

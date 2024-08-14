@@ -1,10 +1,10 @@
 // UTILITY :: PASSWORD 
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { VandorPayload } from "../dto/Vandor.dto";
-import { APP_SECRET } from "../config";
+import { VandorPayload } from "../../dto/Vandor/Vandor.dto";
+import { APP_SECRET } from "../../config";
 import { Request } from "express";
-import { AuthPayload } from "../dto/Auth.dto";
+import { AuthPayload } from "../../dto/Auth/Auth.dto";
 
 
 // SALT GENERATION FOR THE PASWORD
@@ -32,7 +32,7 @@ export const GenerateSignature = ( payload: VandorPayload ) => {
 export const ValidateSignature = async(req:Request): Promise<boolean> => {
     const signature = req.get('Authorization');
     
-    if(signature){
+    if(signature) {
         try {
             const payload = await jwt.verify(signature.split(' ')[1], APP_SECRET) as AuthPayload;
             req.user = payload;

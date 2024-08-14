@@ -1,6 +1,9 @@
 // ROUTES :: ADMIN 
 import express, { Request, Response, NextFunction } from 'express';
-import { CreateVandor, GetVandorByID, GetVandors } from '../controllers';
+
+import { CreateVandor } from '../../controllers';
+import { GetVandorByID } from '../../controllers';
+import { GetVandors } from '../../controllers';
 
 // ROUTER
 const router = express.Router();
