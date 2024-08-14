@@ -26,7 +26,17 @@ const FoodSchema = new Schema({
     rating: { type: Number, required: true },
     images: { type: [String]}
 }, {
+    toJSON: {
+        transform(doc,ret) {
+            delete ret.__v,
+            delete ret.createdAt,
+            delete ret.updatedAt
+        }
+    },
     timestamps: true
 })
 
+const Food = mongoose.model<FoodDoc>('food', FoodSchema);
+
 // EXPORTING 
+export { Food };

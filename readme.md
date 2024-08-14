@@ -24,6 +24,9 @@ Microservices that is all you need for your personal food ordering and deliverin
 ```bash
   npm install jsonwebtoken @types/jsonwebtoken
 ```
+```bash
+  npm install multer @types/multer
+```
 
 ## RUNNING THE PROJECT LOCALLY 
 Git clone the project using the project HTTP / SSH link.
@@ -55,25 +58,6 @@ Initiating the project server
   npm start
 ```
 
-## ROUTES 
-### ADMIN ROUTE 
-```bash
-  http://localhost:8000/admin
-```
-```bash
-  http://localhost:8000/admin/vandor
-```
-```bash
-  http://localhost:8000/admin/createvandor
-```
-```bash
-  http://localhost:8000/admin/allvandors
-```
-### VANDOR ROUTE
-```bash
-  
-```
-
 ## PROJECT CONTRIBUTORS 
 
 | AUTHOR               | PROFILE                                    |
@@ -83,7 +67,8 @@ Initiating the project server
 | MANOSWITA BOSE     | [LINK](https://github.com/manoswita2501)       |
 
 ## PROJECT TIMELINE 
-- (3) 00:00:00
+- (3) 12:51:00
+- (3) 15:58:00
 
 
 

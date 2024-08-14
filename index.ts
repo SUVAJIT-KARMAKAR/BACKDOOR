@@ -3,6 +3,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import { MONGO_URI } from "./config";
 import mongoose from "mongoose";
+import path from 'path';
 
 // IMPORTING ROUTES 
 import { AdminRoute } from "./routes/Admin/AdminRoute";
@@ -11,6 +12,7 @@ import { VandorRoute } from "./routes/Vandor/VandorRoute";
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( {extended: true} ));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // ROUTING 
 app.use('/admin', AdminRoute);
