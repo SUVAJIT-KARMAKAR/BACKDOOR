@@ -1,7 +1,7 @@
 // ROUTES :: VANDOR 
 import express, { Request, Response, NextFunction } from 'express';
 
-import { AddFood, GetFoods, UpdateVandorProfile } from '../../controllers';
+import { AddFood, GetFoods, UpdateVandorCoverImage, UpdateVandorProfile } from '../../controllers';
 import { GetVandorProfile } from '../../controllers';
 import { UpdateVandorService } from '../../controllers';
 import { VandorLogin } from '../../controllers';
@@ -32,6 +32,7 @@ router.post('/login', VandorLogin);
 router.use(Authenticate);
 router.get('/profile', GetVandorProfile);
 router.patch('/profile', UpdateVandorProfile);
+router.patch('/coverimage', images, UpdateVandorCoverImage);
 
 // VANDOR :: SERVICE
 router.patch('/service', UpdateVandorService);

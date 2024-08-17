@@ -68,6 +68,22 @@ export const UpdateVandorProfile = async(req:Request, res:Response, next:NextFun
     return res.json({'message': 'UNABLE TO UPDATE THE VANDOR PROFILE!'});
 }
 
+// VANDOR :: UPDATE COVER IMAGE 
+export const UpdateVandorCoverImage = async(req:Request, res:Response, next:NextFunction) => {
+    const user = req.user;
+    if ( user ) {
+        const vandor = await FindVandor(user._id);
+        if ( vandor !== null ) {
+            const files = req.files as [Express.Multer.File]
+            const images = files.map((file: Express.Multer.File) => file.filename);
+            vandor.coverImages.push(...images);
+            const result = await vandor.save();
+
+            return res.json(result);
+        }
+    }
+}
+
 // VANDOR :: UPDATE SERVICE 
 export const UpdateVandorService = async(req:Request, res:Response, next:NextFunction) => {
     const user = req.user;
