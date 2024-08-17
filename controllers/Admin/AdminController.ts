@@ -16,7 +16,7 @@ export const FindVandor = async(id:string | undefined, email? : string) => {
 
 // CONTROLLERS :: CREATING VANDOR 
 export const CreateVandor = async(req:Request, res:Response, next:NextFunction) => {
-    const { name, address, pincode, foodType, email, password, ownerName, phone } = <CreateVandorInput>req.body;
+    const { name, address, pincode, foodType, email, password, ownerName, phone, rating } = <CreateVandorInput>req.body;
 
     // EXSISTING VANDOR 
     const exsistingVandor = await FindVandor('', email);
@@ -40,7 +40,7 @@ export const CreateVandor = async(req:Request, res:Response, next:NextFunction) 
         salt: salt,
         ownerName: ownerName,
         phone: phone,
-        rating: 0,
+        rating: rating,
         serviceAvailable: false,
         coverImages: [],
         foods: []

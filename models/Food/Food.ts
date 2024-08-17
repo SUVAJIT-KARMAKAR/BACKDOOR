@@ -2,7 +2,7 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 // INTERFACE FOR THE FOOD DATA
-interface FoodDoc extends Document {
+export interface FoodDoc extends Document {
     vandorId: string;
     name: string;
     description: string;

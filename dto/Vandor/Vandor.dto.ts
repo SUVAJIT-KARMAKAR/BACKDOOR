@@ -7,7 +7,8 @@ export interface CreateVandorInput {
     address: string,
     phone: string,
     email: string,
-    password: string
+    password: string,
+    rating: number
 }
 
 // DTO :: VANDOR - LOGIN 
