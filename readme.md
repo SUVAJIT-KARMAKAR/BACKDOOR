@@ -67,8 +67,7 @@ Initiating the project server
 | MANOSWITA BOSE     | [LINK](https://github.com/manoswita2501)       |
 
 ## PROJECT TIMELINE 
-- (3) 12:51:00
-- (3) 15:58:00
+- (5) 00:00:00
 
 
 
