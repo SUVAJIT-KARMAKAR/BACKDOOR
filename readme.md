@@ -139,6 +139,9 @@ Initiating the project server
 ## POSTMAN CONFIGURATION
 ![Logo](images/POSTMAN-BACKDOOR.png)
 
+## MONGODB CONFIGURATION
+![Logo](images/MONGODB-BACKDOOR.png)
+
 ## PROJECT CONTRIBUTORS 
 
 | AUTHOR               | PROFILE                                    |
