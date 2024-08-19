@@ -136,6 +136,8 @@ Initiating the project server
   GET :http://localhost:8003/restaurant/<pincode>
 ```
 
+## POSTMAN CONFIGURATION
+![Logo](images/POSTMAN-BACKDOOR.png)
 
 ## PROJECT CONTRIBUTORS 
 
