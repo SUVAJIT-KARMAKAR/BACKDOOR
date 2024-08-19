@@ -142,6 +142,9 @@ Initiating the project server
 ## MONGODB CONFIGURATION
 ![Logo](images/MONGODB-BACKDOOR.png)
 
+## DOCKER CONTAINERIZATION
+![Logo](images/resources/Docker%20Screen%20Snip.PNG)
+
 ## PROJECT CONTRIBUTORS 
 
 | AUTHOR               | PROFILE                                    |
