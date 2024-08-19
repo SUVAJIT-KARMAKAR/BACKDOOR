@@ -144,6 +144,8 @@ Initiating the project server
 
 ## DOCKER CONTAINERIZATION
 ![Logo](images/resources/Docker%20Screen%20Snip.PNG)
+![Logo](images/resources/Docker%20Container%20-%20App1.PNG)
+![Logo](images/resources/Docker%20Container%20-%20Mongo.PNG)
 
 ## PROJECT CONTRIBUTORS 
 
